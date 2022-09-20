@@ -2,15 +2,18 @@ import { Project } from "../types/types";
 
 const projects: Project[] = [
   {
+    id: "c34ebc94-a4af-4184-81ec-ec1ccfa8121a",
     name: "FRC Robotics Team",
     date: "Aug 2018 - Jun 2022",
     description:
       "World-class competition robot that was ranked **15th in the world** out of over 9000 teams",
     imgUrl:
       "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9d8589d5-dcf8-489b-8392-85bcf3b07db9%2Fthing.png?table=block&id=16b4344d-69e3-45fc-98b4-34a6fdd858ae&spaceId=8168fe94-4e57-4512-9ba3-0755d162edbd&width=2000&userId=25a84f95-0dc8-4a2e-864a-ef8ec78c2088&cache=v2",
+    notionId: "31c0015af52448fd9c0ed93319b5c9df",
     badges: ["robotics", "solidworks", "inventor", "java", "leadership"],
   },
   {
+    id: "e63b95e3-1145-43af-9c73-6d1fe05236b9",
     name: "IoT Miner Fleet",
     date: "Aug 2021 - Mar 2022",
     description:
@@ -20,6 +23,7 @@ const projects: Project[] = [
     badges: ["cad", "solidworks", "javascript"],
   },
   {
+    id: "8a77e038-997e-4363-86d7-cf3a8f975ae4",
     name: "3D Printed Robotic Arm",
     date: "Oct 2020, May 2022",
     description:
@@ -30,6 +34,7 @@ const projects: Project[] = [
   },
 
   {
+    id: "06b38f81-c688-48ef-9ca6-389e86f4625c",
     name: "CircuitParts Web App",
     date: "May 2022 - Now",
     description:
@@ -39,6 +44,7 @@ const projects: Project[] = [
     badges: ["typescript", "javascript", "react", "express", "mongodb"],
   },
   {
+    id: "da6bf03c-03e7-44e3-a30e-3b39603d1ac6",
     name: "DupedWhipz - ECommerce Brand",
     date: "May 2022 - Now",
     description:
@@ -48,6 +54,7 @@ const projects: Project[] = [
     badges: ["leadership", "digital marketing", "robotics", "cad"],
   },
   {
+    id: "11d1419f-3923-40c7-b9ad-f6c283691a82",
     name: "SoftBox - Fulfillment Software",
     date: "May 2022 - Now",
     description:

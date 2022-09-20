@@ -1,7 +1,7 @@
 import Button from "../../elements/Button";
 import { Project } from "../../types/types";
 import ReactMarkdown from "react-markdown";
-import Badge from "../../elements/Badge";
+import { v4 as uuidv4 } from "uuid";
 import ProjectCardBadge from "./ProjectCardBadge";
 
 const ProjectCard = ({ project }: { project: Project }) => {
@@ -18,7 +18,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
           <div className="space-x-2 mt-2">
             {project.badges?.map((badgeName) => (
-              <ProjectCardBadge badge={badgeName} />
+              <div key={uuidv4()}>
+                <ProjectCardBadge badge={badgeName} />
+              </div>
             ))}
           </div>
         </div>

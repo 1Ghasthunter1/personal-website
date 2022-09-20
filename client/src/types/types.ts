@@ -1,8 +1,10 @@
 export interface Project {
+  id: string;
   name: string;
   date: string;
   description: string;
   imgUrl: string;
+  notionId?: string;
   badges?: ProjectBadge[];
 }
 

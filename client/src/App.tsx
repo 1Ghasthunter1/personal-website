@@ -1,14 +1,16 @@
 import Header from "./components/Header";
-import TestMD from "./components/TestMD";
 import AppLayout from "./layouts/AppLayout";
 import ProjectsView from "./views/ProjectsView";
+import { Routes, Route } from "react-router-dom";
+import ArticleView from "./views/ArticleView";
 
 const App = () => {
   return (
     <AppLayout header={<Header />}>
-      <div className="m-8">
-        <ProjectsView />
-      </div>
+      <Routes>
+        <Route path="/" element={<ProjectsView />}></Route>
+        <Route path="/projects/:id" element={<ArticleView />}></Route>
+      </Routes>
     </AppLayout>
   );
 };

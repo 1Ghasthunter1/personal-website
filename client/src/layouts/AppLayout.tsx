@@ -10,7 +10,7 @@ const AppLayout = ({
   return (
     <div className="min-h-screen bg-gray-200">
       <div>{header}</div>
-      {children}
+      <div className="m-8">{children}</div>
       <Footer />
     </div>
   );
