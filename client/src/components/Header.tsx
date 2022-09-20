@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <div className="font-bold text-4xl bg-white shadow p-4 flex">
+    <div className="text-3xl font-bold bg-indigo-700 text-white shadow-lg p-4 flex">
       <div>Hunter Pruett</div>
     </div>
   );
