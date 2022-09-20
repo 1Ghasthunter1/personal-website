@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 const AppLayout = ({
   header,
   children,
@@ -6,9 +8,10 @@ const AppLayout = ({
   children: JSX.Element;
 }) => {
   return (
-    <div className="h-screen bg-gray-200">
+    <div className="min-h-screen bg-gray-200">
       <div>{header}</div>
       {children}
+      <Footer />
     </div>
   );
 };
