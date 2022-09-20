@@ -1,7 +1,12 @@
-import ReactMarkdown from "react-markdown";
+import "react-notion/src/styles.css";
+import "prismjs/themes/prism-tomorrow.css"; // only needed for code highlighting
+import { NotionRenderer } from "react-notion";
 
-const TestMD = () => {
-  return <ReactMarkdown># Hello, *world*!</ReactMarkdown>;
-};
+import blockMap from "./test.json"; // https://www.notion.so/api/v3/loadPageChunk
 
-export default TestMD;
+export default () => (
+  <div style={{ maxWidth: 768 }}>
+    h1
+    <NotionRenderer blockMap={blockMap} />
+  </div>
+);

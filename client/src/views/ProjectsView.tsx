@@ -1,5 +1,6 @@
 import ProjectCard from "../components/projects/ProjectCard";
 import ProjectsCards from "../components/projects/ProjectsCards";
+import TestMD from "../components/TestMD";
 import projects from "../data/projects";
 const ProjectsView = () => {
   return (
@@ -10,6 +11,7 @@ const ProjectsView = () => {
           Below are all of my significant projects throughout the years. Click
           anywhere on the card to read more.
         </div>
+        <TestMD />
       </div>
       <ProjectsCards projects={projects} />
     </div>
