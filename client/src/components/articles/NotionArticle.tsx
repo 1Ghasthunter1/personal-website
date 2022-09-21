@@ -15,9 +15,7 @@ const NotionArticle = ({ notionId }: { notionId?: string }) => {
   return (
     <>
       {notionQuery.data?.data ? (
-        <div className="">
-          <NotionRenderer blockMap={notionQuery.data?.data} />
-        </div>
+        <NotionRenderer blockMap={notionQuery.data?.data} />
       ) : (
         <div>nope</div>
       )}

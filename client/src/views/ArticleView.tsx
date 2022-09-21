@@ -22,9 +22,9 @@ const ArticleView = () => {
             </Button>
           </Link>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center -mb-4">
           <h2 className="text-4xl font-bold">{project.name}</h2>
-          <p className="text-md text-gray-500 mb-6">{project.date}</p>
+          <p className="text-md text-gray-500">{project.date}</p>
         </div>
         <NotionArticle notionId={project.notionId} />
       </div>

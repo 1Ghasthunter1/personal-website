@@ -9,7 +9,7 @@ const projects: Project[] = [
       "World-class competition robot that was ranked **15th in the world** out of over 9000 teams",
     imgUrl:
       "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9d8589d5-dcf8-489b-8392-85bcf3b07db9%2Fthing.png?table=block&id=16b4344d-69e3-45fc-98b4-34a6fdd858ae&spaceId=8168fe94-4e57-4512-9ba3-0755d162edbd&width=2000&userId=25a84f95-0dc8-4a2e-864a-ef8ec78c2088&cache=v2",
-    notionId: "31c0015af52448fd9c0ed93319b5c9df",
+    notionId: "3f918684a61549c08dc04a72e3c86c6b",
     badges: ["robotics", "solidworks", "inventor", "java", "leadership"],
   },
   {
