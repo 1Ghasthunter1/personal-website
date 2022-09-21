@@ -4,6 +4,7 @@ import { NotionRenderer } from "react-notion";
 
 import { useQuery } from "react-query";
 import axios from "axios";
+import ArticleSkeleton from "./ArticleSkeleton";
 
 const NotionArticle = ({ notionId }: { notionId?: string }) => {
   const notionQuery = useQuery(["notion", notionId], async () => {
@@ -17,7 +18,7 @@ const NotionArticle = ({ notionId }: { notionId?: string }) => {
       {notionQuery.data?.data ? (
         <NotionRenderer blockMap={notionQuery.data?.data} />
       ) : (
-        <div>nope</div>
+        <ArticleSkeleton />
       )}
     </>
   );
