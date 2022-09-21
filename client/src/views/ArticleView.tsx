@@ -3,7 +3,6 @@ import projects from "../data/projects";
 import { useParams } from "react-router";
 import Button from "../elements/Button";
 import { Link } from "react-router-dom";
-import ScrollToTop from "../utils/scrollToTop";
 
 const ArticleView = () => {
   const { id } = useParams();
@@ -15,9 +14,8 @@ const ArticleView = () => {
 
   return (
     <div className="flex flex-col items-center ">
-      <ScrollToTop />
       <div className="relative border-b border-gray-200 rounded-2xl w-screen max-w-3xl px-8">
-        <div className="absolute sticky mb-4">
+        <div className=" sticky mb-4">
           <Link to="/">
             <Button style="secondary" iconName="arrow-left">
               Back
