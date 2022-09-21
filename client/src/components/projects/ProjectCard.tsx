@@ -3,9 +3,10 @@ import { Project } from "../../types/types";
 import ReactMarkdown from "react-markdown";
 import { v4 as uuidv4 } from "uuid";
 import ProjectCardBadge from "./ProjectCardBadge";
+import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  return (
+  const Card = () => (
     <div className="relative flex flex-col overflow-hidden shadow-xl rounded-lg bg-white h-100 hover:scale-103 duration-100">
       <div className="flex justify-between pt-6">
         <div className="border-gray-200 bg-white px-5 pb-3 w-full">
@@ -16,7 +17,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <div className="text-md pt-2">
             <ReactMarkdown>{project.description}</ReactMarkdown>
           </div>
-          <div className="space-x-2 mt-2">
+          <div className="flex space-x-2 mt-2">
             {project.badges?.map((badgeName) => (
               <div key={uuidv4()}>
                 <ProjectCardBadge badge={badgeName} />
@@ -32,11 +33,20 @@ const ProjectCard = ({ project }: { project: Project }) => {
         />
       </div>
       <div className="absolute bottom-0 right-0 text-white m-4">
-        <Button style="secondary" iconName="arrow-right">
-          Read More
-        </Button>
+        {project.notionId && (
+          <Button style="secondary" iconName="arrow-right">
+            Read More
+          </Button>
+        )}
       </div>
     </div>
+  );
+  return project.notionId ? (
+    <Link to={`/projects/${project.id}`}>
+      <Card />
+    </Link>
+  ) : (
+    <Card />
   );
 };
 
