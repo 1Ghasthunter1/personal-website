@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-gray-100">
@@ -7,9 +9,12 @@ const Footer = () => {
           aria-label="Footer"
         >
           <div className="px-5 py-2 select-none">
-            <a className="text-base text-gray-500 hover:text-gray-900">
+            <Link
+              className="text-base text-gray-500 hover:text-gray-900"
+              to="/"
+            >
               Go Home
-            </a>
+            </Link>
           </div>
           <div className="px-5 py-2 select-none">
             <a className="text-base text-gray-500 hover:text-gray-900">

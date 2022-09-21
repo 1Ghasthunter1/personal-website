@@ -53,7 +53,7 @@ const Badge = ({
   };
   return (
     <span
-      className={`inline-flex items-center rounded text-xs font-medium ${getColor()} ${getSize()}`}
+      className={`inline-flex items-center rounded text-xs font-medium whitespace-nowrap ${getColor()} ${getSize()}`}
     >
       {children}
     </span>

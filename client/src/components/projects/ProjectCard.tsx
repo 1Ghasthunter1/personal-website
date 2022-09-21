@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const Card = () => (
-    <div className="relative flex flex-col overflow-hidden shadow-xl rounded-lg bg-white h-100 hover:scale-103 duration-100">
+    <div className="relative flex flex-col overflow-hidden shadow-xl rounded-lg md:h-100 bg-white hover:scale-103 duration-100 ">
       <div className="flex justify-between pt-6">
         <div className="border-gray-200 bg-white px-5 pb-3 w-full">
           <h3 className="text-3xl font-bold leading-6 text-gray-900">
@@ -17,9 +17,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <div className="text-md pt-2">
             <ReactMarkdown>{project.description}</ReactMarkdown>
           </div>
-          <div className="flex space-x-2 mt-2">
+          <div className="flex flex-wrap mt-2 -ml-1 relative">
             {project.badges?.map((badgeName) => (
-              <div key={uuidv4()}>
+              <div key={uuidv4()} className="mx-1 left-1">
                 <ProjectCardBadge badge={badgeName} />
               </div>
             ))}

@@ -8,7 +8,7 @@ const AppLayout = ({
   children: JSX.Element;
 }) => {
   return (
-    <div className="min-h-screen bg-gray-200">
+    <div className="min-h-screen bg-gray-200 w-screen overflow-hidden">
       <div>{header}</div>
       <div className="m-8">{children}</div>
       <Footer />

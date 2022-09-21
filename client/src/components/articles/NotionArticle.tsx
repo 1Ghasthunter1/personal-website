@@ -13,13 +13,15 @@ const NotionArticle = ({ notionId }: { notionId?: string }) => {
     return result;
   });
   return (
-    <div style={{ maxWidth: 768 }}>
+    <>
       {notionQuery.data?.data ? (
-        <NotionRenderer blockMap={notionQuery.data?.data} />
+        <div className="">
+          <NotionRenderer blockMap={notionQuery.data?.data} />
+        </div>
       ) : (
         <div>nope</div>
       )}
-    </div>
+    </>
   );
 };
 
