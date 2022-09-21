@@ -4,3 +4,4 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 library.add(fab, fas);
+

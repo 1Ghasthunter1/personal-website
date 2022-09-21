@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./main.css";
-import "./utils";
+import "./utils/utils";
 import "react-toastify/dist/ReactToastify.css";
 
 import { BrowserRouter as Router } from "react-router-dom";
