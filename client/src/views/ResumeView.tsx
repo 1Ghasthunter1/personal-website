@@ -15,14 +15,14 @@ function ResumeView() {
           <div className="text-md">Last updated September 2022.</div>
         </div>
         <div>
-          <Link to="/resume.pdf" target="_blank" download>
+          <Link to="/Hunter Pruett Resume.pdf" target="_blank" download>
             <Button iconName="download">Download</Button>
           </Link>
         </div>
       </div>
       <div className="shadow h-full rounded-xl overflow-hidden z-30">
         <Document
-          file="resume.pdf"
+          file="Hunter Pruett Resume.pdf"
           onLoadProgress={() => setIsLoading(true)}
           onLoadSuccess={() => setIsLoading(false)}
         >
