@@ -20,7 +20,7 @@ function ResumeView() {
           </Link>
         </div>
       </div>
-      <div className=" shadow rounded-xl overflow-hidden">
+      <div className="shadow h-full rounded-xl overflow-hidden z-30">
         <Document
           file="resume.pdf"
           onLoadProgress={() => setIsLoading(true)}
