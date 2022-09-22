@@ -4,9 +4,9 @@ import { Disclosure } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const navigation = [
-  { name: "Projects", href: "/projects"},
-  { name: "Resume", href: "/resume"},
-  { name: "Contact", href: "/contact"},
+  { name: "Projects", href: "/projects" },
+  { name: "Resume", href: "/resume" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Example() {
@@ -52,7 +52,6 @@ export default function Example() {
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white"
                         }`}
-                        aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
                       </div>
@@ -100,11 +99,10 @@ export default function Example() {
                   as="a"
                   href={item.href}
                   className={`block px-3 py-2 rounded-md text-base font-medium ${
-                    item.current
+                    currentUrl === item.href
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white"
                   }`}
-                  aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
