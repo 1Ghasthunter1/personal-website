@@ -12,6 +12,10 @@ const navigation = [
 export default function Example() {
   const navigate = useNavigate();
   const currentUrl = useLocation().pathname;
+
+  const comparePathway = (compareTo: string) => {
+    return currentUrl.startsWith(compareTo);
+  };
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -41,7 +45,7 @@ export default function Example() {
                     alt="Your Company"
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
+                <div className="hidden sm:ml-6 sm:block select-none">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <div
@@ -49,8 +53,8 @@ export default function Example() {
                         onClick={() => {
                           navigate(item.href);
                         }}
-                        className={`px-3 py-2 rounded-md text-sm font-medium ${
-                          currentUrl === item.href
+                        className={`px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
+                          comparePathway(item.href)
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white"
                         }`}
@@ -102,7 +106,7 @@ export default function Example() {
                     navigate(item.href);
                   }}
                   className={`block px-3 py-2 rounded-md text-base font-medium w-full ${
-                    currentUrl === item.href
+                    comparePathway(item.href)
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white"
                   }`}
