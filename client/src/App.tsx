@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import ArticleView from "./views/ArticleView";
 import ScrollToTop from "./utils/scrollToTop";
 import ResumeView from "./views/ResumeView";
+import ContactView from "./views/ContactView";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Routes>
           <Route path="/projects" element={<ProjectsView />}></Route>
           <Route path="/resume" element={<ResumeView />}></Route>
+          <Route path="/contact" element={<ContactView />}></Route>
           <Route path="/projects/:id" element={<ArticleView />}></Route>
           <Route path="*" element={<Navigate to="/projects" />} />
         </Routes>
