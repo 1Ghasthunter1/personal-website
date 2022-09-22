@@ -46,7 +46,9 @@ export default function Example() {
                     {navigation.map((item) => (
                       <div
                         key={item.name}
-                        onClick={() => navigate(item.href)}
+                        onClick={() => {
+                          navigate(item.href);
+                        }}
                         className={`px-3 py-2 rounded-md text-sm font-medium ${
                           currentUrl === item.href
                             ? "bg-gray-900 text-white"
@@ -96,15 +98,16 @@ export default function Example() {
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  onClick={() => {
+                    navigate(item.href);
+                  }}
+                  className={`block px-3 py-2 rounded-md text-base font-medium w-full ${
                     currentUrl === item.href
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white"
                   }`}
                 >
-                  {item.name}
+                  <div className="flex justify-left">{item.name}</div>
                 </Disclosure.Button>
               ))}
             </div>
