@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactMarkdown from "react-markdown";
+import { toast } from "react-toastify";
 import Button from "../elements/Button";
 
 const ContactView = () => {
   return (
     <div className=" bg-gray-200 dark:bg-gray-900 flex flex-wrap items-center justify-center">
-      <div className="container max-w-lg bg-white rounded-xl overflow-hidden dark:bg-gray-800 shadow-lg transform duration-200 easy-in-out m-12">
+      <div className="container max-w-lg bg-white rounded-xl overflow-hidden dark:bg-gray-800 shadow-lg transform duration-200 easy-in-out m-6">
         <div className="h-2/4 h-48 sm:h-72 overflow-hidden">
           <img
             className="w-full"
@@ -32,12 +33,14 @@ const ContactView = () => {
             <Button
               iconName="envelope"
               size="lg"
-              onClick={() =>
-                navigator.clipboard.writeText("hunterpruett2003@gmail.com")
-              }
+              onClick={() => {
+                navigator.clipboard.writeText("hunterpruett2003@gmail.com");
+                toast.success("Copied to clipboard!");
+              }}
             >
               hunterpruett2003@gmail.com
             </Button>
+            <div className="text-xs text-gray-400">Click to copy</div>
 
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6  text-indigo-400 h-8 ">
               <div
