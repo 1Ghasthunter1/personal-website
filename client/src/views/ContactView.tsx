@@ -5,12 +5,15 @@ import Button from "../elements/Button";
 
 const ContactView = () => {
   const [tooltip, setTooltip] = useState<boolean>(false);
+  const [setTimeoutId, setSetTimeoutId] = useState<number>(0);
 
   const doTooltip = (duration: number) => {
+    window.clearTimeout(setTimeoutId);
     setTooltip(true);
-    setTimeout(() => {
+    const id = setTimeout(() => {
       setTooltip(false);
     }, duration * 1000);
+    setSetTimeoutId(id);
   };
   return (
     <div className=" bg-gray-200 dark:bg-gray-900 flex flex-wrap items-center justify-center">
