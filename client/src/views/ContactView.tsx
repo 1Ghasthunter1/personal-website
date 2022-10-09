@@ -1,9 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { toast } from "react-toastify";
 import Button from "../elements/Button";
 
 const ContactView = () => {
+  const [tooltip, setTooltip] = useState<boolean>(false);
+
+  const doTooltip = (duration: number) => {
+    setTooltip(true);
+    setTimeout(() => {
+      setTooltip(false);
+    }, duration * 1000);
+  };
   return (
     <div className=" bg-gray-200 dark:bg-gray-900 flex flex-wrap items-center justify-center">
       <div className="container max-w-lg bg-white rounded-xl overflow-hidden dark:bg-gray-800 shadow-lg transform duration-200 easy-in-out m-6">
@@ -30,16 +38,25 @@ const ContactView = () => {
               Hey there, if you'd like to reach out to me, please feel free to
               shoot me an email or contact me via socials below.
             </ReactMarkdown>
-            <Button
-              iconName="envelope"
-              size="lg"
-              onClick={() => {
-                navigator.clipboard.writeText("hunterpruett2003@gmail.com");
-                toast.success("Copied to clipboard!");
-              }}
-            >
-              hunterpruett2003@gmail.com
-            </Button>
+            <div className="group relative">
+              <Button
+                iconName="envelope"
+                size="lg"
+                onClick={() => {
+                  navigator.clipboard.writeText("hunterpruett2003@gmail.com");
+                  doTooltip(3);
+                }}
+              >
+                hunterpruett2003@gmail.com
+              </Button>
+              <div
+                className={`whitespace-nowrap	 absolute opacity-0 -z-50 border-none ${
+                  tooltip && "opacity-100 z-50"
+                } transition duration-100 -top-3 left-1/2 transform -translate-x-1/2 -translate-y-full px-4 py-2 bg-gray-700 rounded-lg text-center text-white text-sm after:content-[''] after:absolute after:left-1/2 after:top-[100%] after:-translate-x-1/2 after:border-8 after:border-x-transparent after:border-b-transparent after:border-t-gray-700`}
+              >
+                Copied to clipboard!
+              </div>
+            </div>
             <div className="text-xs text-gray-400">Click to copy</div>
 
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-6  text-indigo-400 h-8 ">

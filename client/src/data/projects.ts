@@ -32,6 +32,8 @@ const projects: Project[] = [
     imgUrl:
       "https://hpruett.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F28ac267f-7997-43bb-b18e-77b9e5e32bd4%2Fimg3.jpg?table=block&id=6eeb443e-e664-43ae-85f9-6bf6e70dde2a&spaceId=8168fe94-4e57-4512-9ba3-0755d162edbd&width=1630&userId=&cache=v2",
     badges: ["c++", "solidworks", "robotics", "javascript"],
+    notionId:
+      "882bd941d122412d9d9fe6a0fb42f503",
   },
 
   {
@@ -43,7 +45,7 @@ const projects: Project[] = [
     imgUrl:
       "https://hpruett.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1c619ae7-1f7a-49f2-84b3-90a3b82cddc5%2Fimg2.png?table=block&id=dd8994aa-760b-4ae0-b38d-cebf8a0acdf9&spaceId=8168fe94-4e57-4512-9ba3-0755d162edbd&width=1630&userId=&cache=v2",
     notionId: "adb9c78646b146ed8a21cb3e84a27a4f",
-      badges: ["typescript", "javascript", "react", "express", "mongodb"],
+    badges: ["typescript", "javascript", "react", "express", "mongodb"],
   },
   {
     id: "da6bf03c-03e7-44e3-a30e-3b39603d1ac6",

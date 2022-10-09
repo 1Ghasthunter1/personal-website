@@ -7,19 +7,19 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const Card = () => (
-    <div className="relative flex flex-col overflow-hidden shadow-xl rounded-lg md:h-100 bg-white hover:scale-103 duration-100 ">
+    <div className="relative flex flex-col overflow-hidden shadow-xl rounded-lg h-[25rem] bg-white hover:scale-103 duration-100 ">
       <div className="flex justify-between pt-6">
         <div className="border-gray-200 bg-white px-5 pb-3 w-full">
           <h3 className="text-3xl font-bold leading-6 text-gray-900">
             {project.name}
           </h3>
-          <div className="text-md text-gray-500 pt-2">{project.date}</div>
-          <div className="text-md pt-2">
+          <div className="text-md text-gray-500 pt-0.5">{project.date}</div>
+          <div className="text-md pt-0.5">
             <ReactMarkdown>{project.description}</ReactMarkdown>
           </div>
           <div className="flex flex-wrap mt-2 -ml-1 relative">
             {project.badges?.map((badgeName) => (
-              <div key={uuidv4()} className="mx-1 left-1">
+              <div key={uuidv4()} className="mx-1 mt-1 left-1">
                 <ProjectCardBadge badge={badgeName} />
               </div>
             ))}
