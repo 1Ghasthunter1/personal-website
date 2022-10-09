@@ -10,7 +10,7 @@ const ContactView = () => {
   const doTooltip = (duration: number) => {
     window.clearTimeout(setTimeoutId);
     setTooltip(true);
-    const id = setTimeout(() => {
+    const id = window.setTimeout(() => {
       setTooltip(false);
     }, duration * 1000);
     setSetTimeoutId(id);
