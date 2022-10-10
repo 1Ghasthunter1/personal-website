@@ -25,7 +25,7 @@ const projects: Project[] = [
   },
   {
     id: "8a77e038-997e-4363-86d7-cf3a8f975ae4",
-    name: "3D Printed Robotic Arm",
+    name: "5-Axis Robotic Arm",
     date: "Oct 2020, May 2022",
     description:
       "3D printed 5-axis robot arm with integrated wifi control and web UI",
