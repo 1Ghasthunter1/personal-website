@@ -14,7 +14,7 @@ function ResumeView() {
       <div className="flex justify-between mb-6 ">
         <div>
           <div className="text-2xl font-semibold">Resume</div>
-          <div className="text-md">Last updated September 2022.</div>
+          <div className="text-md">Last updated October 2022.</div>
         </div>
         <div>
           <Link to="/Hunter Pruett Resume.pdf" target="_blank" download>
