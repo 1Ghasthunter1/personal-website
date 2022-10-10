@@ -4,6 +4,8 @@ import { Document, Page, pdfjs } from "react-pdf";
 import { Link } from "react-router-dom";
 import Button from "../elements/Button";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ResumeView() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -20,16 +22,24 @@ function ResumeView() {
           </Link>
         </div>
       </div>
-      <div className="relative shadow h-full rounded-xl overflow-hidden z-30">
+      <div className="relative shadow h-full rounded-xl overflow-hidden z-30  shadow-2xl">
         <div className="h-6 w-full bg-gray-300 flex pt-[6px] pl-2.5 space-x-1.5">
           <div className="h-3 w-3 bg-red-500 rounded-full" />
           <div className="h-3 w-3 bg-yellow-500 rounded-full" />
           <div className="h-3 w-3 bg-green-500 rounded-full" />
         </div>
+
         <Document
           file="Hunter Pruett Resume.pdf"
           onLoadProgress={() => setIsLoading(true)}
           onLoadSuccess={() => setIsLoading(false)}
+          loading={
+            <div className="max-w-[768px] w-screen h-[1024px] text-gray-600 flex justify-center text-xl mt-12">
+              <div className="ml-2 absolute animate-spin">
+                <FontAwesomeIcon icon="circle-notch" />
+              </div>
+            </div>
+          }
         >
           <Page
             pageNumber={1}
