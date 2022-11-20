@@ -22,7 +22,7 @@ function ResumeView() {
           </Link>
         </div>
       </div>
-      <div className="relative shadow h-full rounded-xl overflow-hidden z-30  shadow-2xl">
+      <div className="relative h-full rounded-xl overflow-hidden z-30  shadow-2xl">
         <div className="h-6 w-full bg-gray-300 flex pt-[6px] pl-2.5 space-x-1.5">
           <div className="h-3 w-3 bg-red-500 rounded-full" />
           <div className="h-3 w-3 bg-yellow-500 rounded-full" />
