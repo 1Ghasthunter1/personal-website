@@ -37,12 +37,12 @@ export default function Example() {
                   <img
                     className="block h-8 w-auto lg:hidden"
                     src="icon.svg"
-                    alt="Your Company"
+                    alt="Header Logo"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
                     src="icon.svg"
-                    alt="Your Company"
+                    alt="Header Logo"
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block select-none">

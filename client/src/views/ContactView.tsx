@@ -18,7 +18,7 @@ const ContactView = () => {
   return (
     <div className=" bg-gray-200 dark:bg-gray-900 flex flex-wrap items-center justify-center">
       <div className="container max-w-lg bg-white rounded-xl overflow-hidden dark:bg-gray-800 shadow-lg transform duration-200 easy-in-out m-6">
-        <div className="h-2/4 h-48 sm:h-72 overflow-hidden">
+        <div className="h-48 sm:h-72 overflow-hidden">
           <img
             className="w-full"
             src="https://images.unsplash.com/photo-1638803040283-7a5ffd48dad5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
@@ -27,7 +27,7 @@ const ContactView = () => {
         <div className="flex justify-start px-5 -mt-12">
           <span className="block relative h-32 w-32">
             <img
-              src="https://media-exp1.licdn.com/dms/image/C5603AQFAAaGz4KRXmQ/profile-displayphoto-shrink_400_400/0/1592107357026?e=1669248000&v=beta&t=iJI2mByDn18kPxW34sbaWXJNyddn3HDYhAvQWT4Qvbw"
+              src="HunterPruett.jpg"
               className="mx-auto object-cover rounded-full h-24 w-24 bg-white p-1"
             />
           </span>

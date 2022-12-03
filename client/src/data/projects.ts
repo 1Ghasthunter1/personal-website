@@ -50,7 +50,7 @@ const projects: Project[] = [
   {
     id: "da6bf03c-03e7-44e3-a30e-3b39603d1ac6",
     name: "ECommerce Brand",
-    date: "May 2022 - Now",
+    date: "July 2020 - Now",
     description:
       "Founded and scaled an eCommerce brand to over **$216,000 in revenue** in it's first year.",
     imgUrl:
@@ -61,7 +61,7 @@ const projects: Project[] = [
   {
     id: "11d1419f-3923-40c7-b9ad-f6c283691a82",
     name: "SoftBox Fulfillment Software",
-    date: "May 2022 - Now",
+    date: "Feb 2020 - May 2020",
     description:
       "Full web-based software suite to manage orders, product manufacturing, and product production for DupedWhipz",
     imgUrl:
